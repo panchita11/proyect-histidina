@@ -53,7 +53,6 @@ elif opcion == "Propiedades químicas":
     - **Peso molecular:** 155.15 g/mol.
     - **Clasificación:** Aminoácido esencial.
     """)
-  pip install dash plotly numpy
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
