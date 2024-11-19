@@ -27,6 +27,10 @@ if opcion == "Información básica":
     st.write("""En la naturaleza encontramos el enantiómero levorrotarorio de la histidina, es decir, la forma L-histidina.
 
 Es un aminoácido muy presente en gran cantidad de alimentos, tanto de origen animal como vegetal, por lo que su carencia es una condición extraña y normalmente asociada a alteraciones genéticas o malnutrición severa.""")
+  st.write("""La histidina se obtiene por hidrólisis de numerosas sustancias proteicas.
+Desde el punto de vista físico se presenta en cristales incoloros, ópticamente activos, solubles en agua, insolubles en alcohol y en éter, que por descarboxilación se transforman en histamina. Puede obtenerse por síntesis de diferentes formas. En cuanto a su valor nutricional, la histidina no se considera un aminoácido esencial para hombres adultos y adolescentes, mientras que sí lo es para la primera infancia. También es esencial para la mayoría de los mamíferos.
+La histidina está contenida en proporciones relativamente altas en la hemoglobina. El grupo imidazol de la histidina constituye el sitio activo de muchas enzimas: las modificaciones químicas de residuos de histidina específicos provocan de hecho su inactivación. La principal vía del catabolismo de la histidina en mamíferos y humanos pasa por su transformación en ácido glutámico, que comienza con la degradación de la histidina a ácido urocánico por la acción de la enzima histidasa.
+La deficiencia hereditaria de histidinasa (la enzima que descompone la histidina) que puede transmitirse como rasgo recesivo, conduce a la acumulación en la circulación de histidina (histidinemia) con un cuadro de retraso mental y estatutario, anemia, pigmentación deficiente de la piel; también se acompaña de un aumento de la excreción del aminoácido en la orina (histidinuria). La histidinuria elevada puede ocurrir durante el embarazo (histidinuria gravidarum) y en algunas condiciones de insuficiencia hepática funcional.""")    
 elif opcion == "Funciones biológicas":
     st.header("Funciones biológicas de la Histidina")
     st.write("""
@@ -45,5 +49,4 @@ elif opcion == "Propiedades químicas":
     - **Peso molecular:** 155.15 g/mol.
     - **Clasificación:** Aminoácido esencial.
     """)
-    st.video("""<div class="sketchfab-embed-wrapper"> <iframe title="Eve3D Aminoácido Histidina" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/56604a3421fd497a90e21de0ce3cd9f3/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/eve3d-aminoacido-histidina-56604a3421fd497a90e21de0ce3cd9f3?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Eve3D Aminoácido Histidina </a> by <a href="https://sketchfab.com/eve3d_unam?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> EVE3D UNAM </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>""")
-
+   
