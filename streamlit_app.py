@@ -18,7 +18,7 @@ if opcion == "Información básica":
     por ser precursora de la histamina.
     """)
     st.image(
-        "https://upload.wikimedia.org/wikipedia/commons/9/94/Histidine_skeletal.svg",
+        "https://thumbs.dreamstime.com/b/f%C3%B3rmula-qu%C3%ADmica-de-histidina-estructura-molecular-ilustraci%C3%B3n-vectorial-aislada-en-fondo-blanco-238646983.jpg",
         caption="Estructura molecular de la histidina",
         width=300
     )
