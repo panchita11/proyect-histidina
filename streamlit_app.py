@@ -31,6 +31,7 @@ Tanto de origen animal como vegetal, por lo que su carencia es una condición ex
 Desde el punto de vista físico se presenta en cristales incoloros, ópticamente activos, solubles en agua, insolubles en alcohol y en éter, que por descarboxilación se transforman en histamina. Puede obtenerse por síntesis de diferentes formas. En cuanto a su valor nutricional, la histidina no se considera un aminoácido esencial para hombres adultos y adolescentes, mientras que sí lo es para la primera infancia. También es esencial para la mayoría de los mamíferos.
 La histidina está contenida en proporciones relativamente altas en la hemoglobina. El grupo imidazol de la histidina constituye el sitio activo de muchas enzimas: las modificaciones químicas de residuos de histidina específicos provocan de hecho su inactivación. La principal vía del catabolismo de la histidina en mamíferos y humanos pasa por su transformación en ácido glutámico, que comienza con la degradación de la histidina a ácido urocánico por la acción de la enzima histidasa.
 La deficiencia hereditaria de histidinasa (la enzima que descompone la histidina) que puede transmitirse como rasgo recesivo, conduce a la acumulación en la circulación de histidina (histidinemia) con un cuadro de retraso mental y estatutario, anemia, pigmentación deficiente de la piel; también se acompaña de un aumento de la excreción del aminoácido en la orina (histidinuria). La histidinuria elevada puede ocurrir durante el embarazo (histidinuria gravidarum) y en algunas condiciones de insuficiencia hepática funcional.""")
+    st.image("https://arribasalud.com/wp-content/uploads/2018/02/histidina-665x285.jpg")
 elif opcion == "Funciones biológicas":
     st.header("Funciones biológicas de la Histidina")
     st.write("""
@@ -49,4 +50,5 @@ elif opcion == "Propiedades químicas":
     - **Peso molecular:** 155.15 g/mol.
     - **Clasificación:** Aminoácido esencial.
     """)
+   
    
