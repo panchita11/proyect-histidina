@@ -37,9 +37,12 @@ elif opcion == "Funciones biológicas":
     st.write("""
     La histidina participa en:
     - La síntesis de proteínas: La histidina es un componente de las proteínas, incorporándose durante la traducción del ARN mensajero en los ribosomas.
+    
     - Producción de hemoglobina:Estabilizan la unión del oxígeno a través de interacciones con el hierro del grupo hemo.
 Regulan la afinidad de la hemoglobina al oxígeno en respuesta a cambios en pH (efecto Bohr), debido a la capacidad del anillo imidazol de la histidina para aceptar o donar protones.
+
     - Metabolismo del nitrógeno:La histidina participa en el metabolismo del nitrógeno como fuente de este elemento. Es desaminada por la enzima histidasa para formar urocanato, un paso inicial en su degradación. 
+    
     - Como precursor de la histamina, involucrada en respuestas inmunitarias y digestivas:La enzima histidina descarboxilasa convierte la histidina en histamina, que actúa como:
 
 Mediador inmunológico: Promueve la inflamación y la vasodilatación en respuesta a lesiones o alérgenos.
