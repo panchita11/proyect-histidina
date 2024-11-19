@@ -46,46 +46,11 @@ elif opcion == "Funciones biológicas":
     """)
 elif opcion == "Propiedades químicas":
     st.header("Propiedades químicas de la Histidina")
-    st.write("""
-    Algunas propiedades clave:
-    - **pKa** del grupo imidazol: ~6.0.
-    - **Solubilidad:** Alta en agua.
-    - **Peso molecular:** 155.15 g/mol.
-    - **Clasificación:** Aminoácido esencial.
-    """)
-import streamlit as st
-import plotly.express as px
-import pandas as pd
-
-# Título del dashboard
-st.title("Gráfica interactiva con Streamlit y Plotly")
-
-# Crear un conjunto de datos
-st.sidebar.header("Configuración de la gráfica")
-x_values = st.sidebar.text_input("Etiquetas (separadas por comas)", "A, B, C, D")
-y_values = st.sidebar.text_input("Valores (separados por comas)", "10, 20, 15, 25")
-
-try:
-    x_values = [x.strip() for x in x_values.split(",")]
-    y_values = [float(y) for y in y_values.split(",")]
-
-    if len(x_values) != len(y_values):
-        st.error("El número de etiquetas y valores no coincide.")
-    else:
-        # Crear un DataFrame
-        data = pd.DataFrame({
-            "Categorías": x_values,
-            "Valores": y_values
-        })
-
-        # Crear la gráfica interactiva
-        fig = px.bar(data, x="Categorías", y="Valores", color="Valores", title="Gráfica de Barras")
-        
-        # Mostrar la gráfica
-        st.plotly_chart(fig)
-
-except ValueError:
-    st.error("Introduce los datos correctamente. Asegúrate de que los valores sean números.")
+    st.write(""" pKa del grupo imidazol: ~6.0.
+Solubilidad: Alta en agua.
+Peso molecular: 155.15 g/mol.
+Clasificación: Aminoácido esencial.""")
+  
 
 
 
