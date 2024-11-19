@@ -46,10 +46,14 @@ elif opcion == "Funciones biológicas":
     """)
 elif opcion == "Propiedades químicas":
     st.header("Propiedades químicas de la Histidina")
-    st.write(""" pKa del grupo imidazol: ~6.0.
-Solubilidad: Alta en agua.
-Peso molecular: 155.15 g/mol.
-Clasificación: Aminoácido esencial.""")
+    st.write(""" 
+    -pKa del grupo imidazol: ~6.0.
+    
+    -Solubilidad: Alta en agua.
+    
+    -Peso molecular: 155.15 g/mol.
+    
+    -Clasificación: Aminoácido esencial.""")
   
 
 
