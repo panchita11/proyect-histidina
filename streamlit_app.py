@@ -24,6 +24,9 @@ if opcion == "Información básica":
         caption="Estructura molecular de la histidina",
         width=300
     )
+    st.write("""En la naturaleza encontramos el enantiómero levorrotarorio de la histidina, es decir, la forma L-histidina.
+
+Es un aminoácido muy presente en gran cantidad de alimentos, tanto de origen animal como vegetal, por lo que su carencia es una condición extraña y normalmente asociada a alteraciones genéticas o malnutrición severa.""")
 elif opcion == "Funciones biológicas":
     st.header("Funciones biológicas de la Histidina")
     st.write("""
