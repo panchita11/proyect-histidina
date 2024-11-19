@@ -40,3 +40,10 @@ elif opcion == "Propiedades químicas":
     - **Peso molecular:** 155.15 g/mol.
     - **Clasificación:** Aminoácido esencial.
     """)
+    # Elementos adicionales en la barra lateral
+st.sidebar.header("Ajustes")
+st.sidebar.slider("Ajusta el pH del medio:", min_value=0, max_value=14, value=7)
+st.sidebar.text("Explora cómo el pH afecta la histidina.")
+
+# Pie de página
+st.sidebar.info("Esta es una aplicación educativa sobre la histidina.")
