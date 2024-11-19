@@ -53,41 +53,39 @@ elif opcion == "Propiedades químicas":
     - **Peso molecular:** 155.15 g/mol.
     - **Clasificación:** Aminoácido esencial.
     """)
-import dash
-from dash import dcc, html
-from dash.dependencies import Input, Output
-import numpy as np
-import plotly.graph_objects as go
+import streamlit as st
+import plotly.express as px
+import pandas as pd
 
-# Crear la aplicación Dash
-app = dash.Dash(__name__)
+# Título del dashboard
+st.title("Gráfica interactiva con Streamlit y Plotly")
 
-# Datos de la histidina
-pKa = [1.8, 6.0, 9.3]  # Valores de pKa de los grupos funcionales (COOH, Imidazol, NH3+)
+# Crear un conjunto de datos
+st.sidebar.header("Configuración de la gráfica")
+x_values = st.sidebar.text_input("Etiquetas (separadas por comas)", "A, B, C, D")
+y_values = st.sidebar.text_input("Valores (separados por comas)", "10, 20, 15, 25")
 
-# Función para calcular la carga neta
-def carga_histidina(pH):
-    carga_COOH = -1 / (1 + 10 ** (pKa[0] - pH))  # Carga del grupo carboxilo
-    carga_NH3 = 1 / (1 + 10 ** (pH - pKa[2]))    # Carga del grupo amino
-    carga_Imidazol = 1 / (1 + 10 ** (pH - pKa[1]))  # Carga del imidazol
-    return carga_COOH + carga_NH3 + carga_Imidazol
+try:
+    x_values = [x.strip() for x in x_values.split(",")]
+    y_values = [float(y) for y in y_values.split(",")]
 
-# Rango de pH para graficar
-pH_values = np.linspace(0, 14, 500)
-cargas = [carga_histidina(pH) for pH in pH_values]
+    if len(x_values) != len(y_values):
+        st.error("El número de etiquetas y valores no coincide.")
+    else:
+        # Crear un DataFrame
+        data = pd.DataFrame({
+            "Categorías": x_values,
+            "Valores": y_values
+        })
 
-# Layout de la aplicación
-app.layout = html.Div([
-    html.H1("Punto Isoeléctrico de la Histidina"),
-    dcc.Graph(id="grafica-pI"),
-    html.P("Seleccione el rango de pH:"),
-    dcc.RangeSlider(
-        id="rango-pH",
-        min=0, max=14, step=0.1,
-        marks={i: str(i) for i in range(0, 15)},
-        value=[0, 14]
-    )
-])
+        # Crear la gráfica interactiva
+        fig = px.bar(data, x="Categorías", y="Valores", color="Valores", title="Gráfica de Barras")
+        
+        # Mostrar la gráfica
+        st.plotly_chart(fig)
+
+except ValueError:
+    st.error("Introduce los datos correctamente. Asegúrate de que los valores sean números.")
 
 
 
