@@ -61,7 +61,7 @@ import pandas as pd
 import altair as alt
 import streamlit as st 
 
-grafica = pd. DataFrame({"pH": [7.59, 4.9, 6.8, 7.0, 4.6],"value": [7.59, 4.9, 6.8, 7.0, 4.6 ]})
+grafica = pd. DataFrame({"pH": [1, 2, 3, 3 ,4, 5],"value": [7, 6, 5, 4, 1, 2 ]})
 
 c = alt.Chart(grafica).mark_arc().encode(theta="value", color="category")
 
