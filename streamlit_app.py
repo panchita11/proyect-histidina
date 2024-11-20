@@ -54,17 +54,11 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-    pip install ploty
-    import plotly.graph_objects as go
-
-# Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
+    pip install plotly
+    # Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
 proteinas = ['Histidina', 'Albumina', 'Hemoglobina', 'Mioglobina', 'Caseína']
 pi_valores = [7.59, 4.9, 6.8, 7.0, 4.6]  # Valores de pI
-
-# Crear la figura
 fig = go.Figure()
-
-# Agregar una barra para cada proteína
 fig.add_trace(go.Bar(
     x=proteinas,
     y=pi_valores,
@@ -73,8 +67,6 @@ fig.add_trace(go.Bar(
     marker_color=['blue', 'green', 'red', 'purple', 'orange'],  # Colores personalizados
     name='pI de Proteínas'
 ))
-
-# Personalizar la gráfica
 fig.update_layout(
     title="Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas",
     xaxis_title="Proteínas",
@@ -82,10 +74,8 @@ fig.update_layout(
     yaxis=dict(range=[0, 10]),  # Ajustar rango del eje Y
     template='plotly_white'
 )
-
-# Mostrar la gráfica interactiva
-fig.show()
-
+   
+  
 
 
   
