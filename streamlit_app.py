@@ -53,8 +53,10 @@ elif opcion == "Propiedades químicas":
     
     -Peso molecular: 155.15 g/mol.
     
-    -Clasificación: Aminoácido esencial.""")
-    st.title(""Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas")
+    -Clasificación: Aminoácido esencial.
+    
+    Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
+   
 import pandas as pd
 import altair as alt
 import streamlit as st 
