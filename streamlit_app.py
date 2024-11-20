@@ -56,10 +56,11 @@ elif opcion == "Propiedades químicas":
     -Clasificación: Aminoácido esencial.
     
     Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
+    
    pip install streamlit plotly pandas
 import streamlit as st
-import plotly.express as px
 import pandas as pd
+import plotly.graph_objects as go
 
 # Título de la sección
 st.title("Comparación del pH Isoeléctrico (pI) de la Histidina y otras Moléculas")
@@ -70,30 +71,41 @@ datos = {
     "pI": [7.59, 4.9, 6.8, 7.0, 4.6]
 }
 
-# Convertir a DataFrame
-df = pd.DataFrame(datos)
+# Convertir datos a DataFrame
+try:
+    df = pd.DataFrame(datos)
+    st.write("Datos cargados correctamente:")
+    st.dataframe(df)
+except Exception as e:
+    st.error(f"Error al cargar datos: {e}")
 
-# Crear la gráfica usando Plotly Express
-fig = px.bar(
-    df,
-    x="Molécula",
-    y="pI",
-    text="pI",
-    title="pH Isoeléctrico (pI) de la Histidina y otras Moléculas",
-    labels={"pI": "pH Isoeléctrico", "Molécula": "Moléculas"},
-    color="Molécula",
-    color_discrete_sequence=px.colors.qualitative.Set2
-)
+# Crear gráfica usando Plotly Graph Objects
+try:
+    fig = go.Figure()
 
-# Configurar la apariencia de la gráfica
-fig.update_traces(textposition="outside")
-fig.update_layout(
-    template="plotly_white",
-    yaxis=dict(range=[0, 8], title="pH Isoeléctrico"),
-    xaxis_title="Moléculas",
-    title_x=0.5
-)
+    # Agregar barras al gráfico
+    fig.add_trace(go.Bar(
+        x=df["Molécula"],
+        y=df["pI"],
+        text=df["pI"],
+        textposition="auto",
+        marker_color=["blue", "green", "red", "purple", "orange"]
+    ))
 
-# Mostrar la gráfica en Streamlit
-st.plotly_chart(fig)
+    # Configuración de la gráfica
+    fig.update_layout(
+        title="pH Isoeléctrico de la Histidina y otras Moléculas",
+        xaxis_title="Moléculas",
+        yaxis_title="pH Isoeléctrico",
+        template="plotly_white"
+    )
+
+    # Mostrar la gráfica
+    st.plotly_chart(fig)
+
+except Exception as e:
+    st.error(f"Error al generar la gráfica: {e}")
+
+
+
 
