@@ -54,7 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-    pip install streamlit plotly
+   streamlit run app.py
 # Título de la app
 st.title("Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas")
 
