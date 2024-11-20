@@ -1,4 +1,5 @@
 import streamlit as st
+pip install streamlit plotly pandas 
 
 st.title("HISTIDINA")
 st.sidebar.title("Menú de navegación")
@@ -57,7 +58,6 @@ elif opcion == "Propiedades químicas":
     
     Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
     
-   pip install streamlit plotly pandas
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
