@@ -56,7 +56,7 @@ elif opcion == "Propiedades químicas":
     -Clasificación: Aminoácido esencial.
     
     Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
-     st.video("https://youtube.com/shorts/5xuA2aGRIVU?si=NmfuylJa7j3KCqqA")
+st.video("https://youtube.com/shorts/5xuA2aGRIVU?si=NmfuylJa7j3KCqqA")
 
 
 
