@@ -104,6 +104,7 @@ try:
 
 except Exception as e:
     st.error(f"Error al generar la gráfica: {e}")
+streamlit run app.py
 
 
 
