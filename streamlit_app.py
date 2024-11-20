@@ -63,5 +63,4 @@ grafica = pd. DataFrame({"category": [1, 2, 3, 4,5 ,6 ],"value": [2, 3, 4, 5, 6,
 c = alt.Chart(grafica).mark_arc().encode(theta="value", color="category")
 
 st.altair_chart(c)
-streamlit run main.py
-   
+
