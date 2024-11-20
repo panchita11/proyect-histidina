@@ -54,31 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-   streamlit run app.py
-# Título de la app
-st.title("Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas")
-# Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
-proteinas = ['Histidina', 'Albumina', 'Hemoglobina', 'Mioglobina', 'Caseína']
-pi_valores = [7.59, 4.9, 6.8, 7.0, 4.6]  # Valores de pI
-# Crear la gráfica con Plotly
-fig = go.Figure()
-# Agregar barras para las proteínas
-fig.add_trace(go.Bar(
-    x=proteinas,
-    y=pi_valores,
-    text=pi_valores,
-    textposition='auto',
-    marker_color=['blue', 'green', 'red', 'purple', 'orange']
-))
-# Configurar el diseño de la gráfica
-fig.update_layout(
-    title="pH Isoeléctrico de la Histidina comparado con otras proteínas",
-    xaxis_title="Proteínas",
-    yaxis_title="pI",
-    template="plotly_white"
-)
-# Mostrar la gráfica interactiva en Streamlit
-st.plotly_chart(fig)
+   st.video(<div class="sketchfab-embed-wrapper"> <iframe title="Eve3D Aminoácido Histidina" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/56604a3421fd497a90e21de0ce3cd9f3/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/eve3d-aminoacido-histidina-56604a3421fd497a90e21de0ce3cd9f3?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Eve3D Aminoácido Histidina </a> by <a href="https://sketchfab.com/eve3d_unam?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> EVE3D UNAM </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>)
    
   
 
