@@ -54,7 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-    
+    st.pyplot()
     # Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
 proteinas = ['Histidina', 'Albumina', 'Hemoglobina', 'Mioglobina', 'Caseína']
 pi_valores = [7.59, 4.9, 6.8, 7.0, 4.6]  # Valores de pI
