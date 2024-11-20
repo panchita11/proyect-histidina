@@ -54,27 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-    st.pyplot()
-    # Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
-proteinas = ['Histidina', 'Albumina', 'Hemoglobina', 'Mioglobina', 'Caseína']
-pi_valores = [7.59, 4.9, 6.8, 7.0, 4.6]  # Valores de pI
-fig = go.Figure()
-fig.add_trace(go.Bar(
-    x=proteinas,
-    y=pi_valores,
-    text=pi_valores,
-    textposition='auto',
-    marker_color=['blue', 'green', 'red', 'purple', 'orange'],  # Colores personalizados
-    name='pI de Proteínas'
-))
-fig.update_layout(
-    title="Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas",
-    xaxis_title="Proteínas",
-    yaxis_title="pI",
-    yaxis=dict(range=[0, 10]),  # Ajustar rango del eje Y
-    template='plotly_white'
-)
-fig.show()
+    import streamlit as stimport matplotlib.pyplot as pltimport numpy as nprand= np.random.normal(1, 2, size=20)fig, ax = plt.subplots()ax.hist(rand, bins=15)st.pyplot(fig)
    
   
 
