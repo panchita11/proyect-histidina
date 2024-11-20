@@ -54,9 +54,49 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-   st.video(<div class="sketchfab-embed-wrapper"> <iframe title="Eve3D Aminoácido Histidina" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/56604a3421fd497a90e21de0ce3cd9f3/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/eve3d-aminoacido-histidina-56604a3421fd497a90e21de0ce3cd9f3?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Eve3D Aminoácido Histidina </a> by <a href="https://sketchfab.com/eve3d_unam?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> EVE3D UNAM </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=56604a3421fd497a90e21de0ce3cd9f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>)
-   
-  
+   import streamlit as st
+import py3Dmol
+
+# Función para mostrar un modelo 3D usando py3Dmol
+def mostrar_modelo_3d():
+    # Inicializar el visor de py3Dmol
+    viewer = py3Dmol.view(width=800, height=500)
+    
+    # Modelo de la histidina en formato PDB (puedes usar SMILES o PDB para otras moléculas)
+    histidina_pdb = """
+HETATM    1  N   HIS A   1      -1.204   0.689   0.000  1.00  0.00           N  
+HETATM    2  CA  HIS A   1      -0.012   0.000   0.000  1.00  0.00           C  
+HETATM    3  C   HIS A   1       1.264   0.763   0.000  1.00  0.00           C  
+HETATM    4  O   HIS A   1       1.304   2.000   0.000  1.00  0.00           O  
+HETATM    5  CB  HIS A   1      -0.312  -1.523   0.000  1.00  0.00           C  
+HETATM    6  CG  HIS A   1      -0.890  -2.089   1.222  1.00  0.00           C  
+HETATM    7  ND1 HIS A   1      -1.812  -1.241   2.035  1.00  0.00           N  
+HETATM    8  CD2 HIS A   1      -0.768  -3.366   1.799  1.00  0.00           C  
+HETATM    9  CE1 HIS A   1      -2.209  -1.921   3.126  1.00  0.00           C  
+HETATM   10  NE2 HIS A   1      -1.516  -3.110   2.963  1.00  0.00           N  
+HETATM   11  H   HIS A   1      -1.204   1.677   0.000  1.00  0.00           H  
+HETATM   12  HA  HIS A   1      -0.001  -0.024   0.987  1.00  0.00           H  
+HETATM   13  HB2 HIS A   1       0.012  -1.877   0.000  1.00  0.00           H  
+HETATM   14  HB3 HIS A   1      -0.898  -1.853  -0.863  1.00  0.00           H  
+"""
+    # Cargar el modelo de histidina
+    viewer.addModel(histidina_pdb, 'pdb')
+    viewer.setStyle({'stick': {}})
+    viewer.zoomTo()
+    
+    # Mostrar el visor
+    return viewer
+
+# Configuración de la aplicación
+st.title("Modelo 3D de la Histidina")
+
+st.write("A continuación, puedes visualizar un modelo 3D interactivo de la molécula de histidina:")
+
+# Renderizar el modelo 3D
+modelo_3d = mostrar_modelo_3d()
+modelo_html = modelo_3d._make_html()
+st.components.v1.html(modelo_html, width=800, height=500)
+
 
 
   
