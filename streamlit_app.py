@@ -1,5 +1,4 @@
 import streamlit as st
-pip install streamlit plotly pandas 
 
 st.title("HISTIDINA")
 st.sidebar.title("Menú de navegación")
