@@ -58,7 +58,7 @@ elif opcion == "Propiedades químicas":
     Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
     
 pip install ploty 
-
+pip show ploty 
 
 
 
