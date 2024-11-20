@@ -75,16 +75,14 @@ fig.add_trace(go.Bar(
     y=pi_valores,
     text=pi_valores,
     textposition='auto',
-    marker_color=['blue', 'green', 'red', 'purple', 'orange']
-))
+    marker_color=['blue', 'green', 'red', 'purple', 'orange']))
 
 # Configurar el diseño de la gráfica
 fig.update_layout(
     title="pH Isoeléctrico de la Histidina comparado con otras proteínas",
     xaxis_title="Proteínas",
     yaxis_title="pI",
-    template="plotly_white"
-)
+    template="plotly_white")
 
 # Mostrar la gráfica interactiva en Streamlit
 st.plotly_chart(fig)
