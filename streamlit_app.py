@@ -54,6 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
+    pip install streamlit py3Dmol
    import streamlit as st
 import py3Dmol
 
