@@ -56,7 +56,7 @@ elif opcion == "Propiedades químicas":
     -Clasificación: Aminoácido esencial.
     
     Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
-   
+   pip install streamlit plotly pandas
 import streamlit as st
 import plotly.express as px
 import pandas as pd
