@@ -57,54 +57,9 @@ elif opcion == "Propiedades químicas":
     
     Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas""")
     
-import streamlit as st
-import pandas as pd
-import plotly.graph_objects as go
+pip install ploty 
 
-# Título de la sección
-st.title("Comparación del pH Isoeléctrico (pI) de la Histidina y otras Moléculas")
 
-# Datos de ejemplo: pH isoeléctrico (pI) de diferentes moléculas
-datos = {
-    "Molécula": ["Histidina", "Albumina", "Hemoglobina", "Mioglobina", "Caseína"],
-    "pI": [7.59, 4.9, 6.8, 7.0, 4.6]
-}
-
-# Convertir datos a DataFrame
-try:
-    df = pd.DataFrame(datos)
-    st.write("Datos cargados correctamente:")
-    st.dataframe(df)
-except Exception as e:
-    st.error(f"Error al cargar datos: {e}")
-
-# Crear gráfica usando Plotly Graph Objects
-try:
-    fig = go.Figure()
-
-    # Agregar barras al gráfico
-    fig.add_trace(go.Bar(
-        x=df["Molécula"],
-        y=df["pI"],
-        text=df["pI"],
-        textposition="auto",
-        marker_color=["blue", "green", "red", "purple", "orange"]
-    ))
-
-    # Configuración de la gráfica
-    fig.update_layout(
-        title="pH Isoeléctrico de la Histidina y otras Moléculas",
-        xaxis_title="Moléculas",
-        yaxis_title="pH Isoeléctrico",
-        template="plotly_white"
-    )
-
-    # Mostrar la gráfica
-    st.plotly_chart(fig)
-
-except Exception as e:
-    st.error(f"Error al generar la gráfica: {e}")
-streamlit run app.py
 
 
 
