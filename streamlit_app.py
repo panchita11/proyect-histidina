@@ -140,6 +140,7 @@ if mostrar_grafica:
 # Modelo 3D
 if mostrar_modelo:
     st.subheader("Modelo 3D de la Histidina")
+    streamlit run dashboard_histidina.py
     modelo_3d = render_modelo_3d()
     modelo_html = modelo_3d._make_html()
     st.components.v1.html(modelo_html, width=600, height=400)
