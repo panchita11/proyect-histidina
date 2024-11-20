@@ -74,6 +74,7 @@ fig.update_layout(
     yaxis=dict(range=[0, 10]),  # Ajustar rango del eje Y
     template='plotly_white'
 )
+fig.show()
    
   
 
