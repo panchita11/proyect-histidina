@@ -54,6 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
+    pip install ploty
     import plotly.graph_objects as go
 
 # Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
