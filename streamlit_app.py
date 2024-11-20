@@ -57,14 +57,11 @@ elif opcion == "Propiedades químicas":
    streamlit run app.py
 # Título de la app
 st.title("Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas")
-
 # Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
 proteinas = ['Histidina', 'Albumina', 'Hemoglobina', 'Mioglobina', 'Caseína']
 pi_valores = [7.59, 4.9, 6.8, 7.0, 4.6]  # Valores de pI
-
 # Crear la gráfica con Plotly
 fig = go.Figure()
-
 # Agregar barras para las proteínas
 fig.add_trace(go.Bar(
     x=proteinas,
@@ -73,7 +70,6 @@ fig.add_trace(go.Bar(
     textposition='auto',
     marker_color=['blue', 'green', 'red', 'purple', 'orange']
 ))
-
 # Configurar el diseño de la gráfica
 fig.update_layout(
     title="pH Isoeléctrico de la Histidina comparado con otras proteínas",
@@ -81,7 +77,6 @@ fig.update_layout(
     yaxis_title="pI",
     template="plotly_white"
 )
-
 # Mostrar la gráfica interactiva en Streamlit
 st.plotly_chart(fig)
    
