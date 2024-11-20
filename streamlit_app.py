@@ -54,39 +54,7 @@ elif opcion == "Propiedades químicas":
     -Peso molecular: 155.15 g/mol.
     
     -Clasificación: Aminoácido esencial.""")
-import streamlit as st
-import pandas as pd
-import ploty.express as px
-from ploty.subplots import make_subplots
-import datetime
-import ploty.graph_objects as go
-st.title("Comparación del pH Isoeléctrico (pI) de la Histidina y otras Proteínas")
-
-# Datos de ejemplo: pH isoeléctrico (pI) de diferentes proteínas
-proteinas = ['Histidina', 'Albumina', 'Hemoglobina', 'Mioglobina', 'Caseína']
-pi_valores = [7.59, 4.9, 6.8, 7.0, 4.6]  # Valores de pI
-
-# Crear la gráfica con Plotly
-fig = go.Figure()
-
-# Agregar barras para las proteínas
-fig.add_trace(go.Bar(
-    x=proteinas,
-    y=pi_valores,
-    text=pi_valores,
-    textposition='auto',
-    marker_color=['blue', 'green', 'red', 'purple', 'orange']))
-
-# Configurar el diseño de la gráfica
-fig.update_layout(
-    title="pH Isoeléctrico de la Histidina comparado con otras proteínas",
-    xaxis_title="Proteínas",
-    yaxis_title="pI",
-    template="plotly_white")
-
-# Mostrar la gráfica interactiva en Streamlit
-st.plotly_chart(fig)
-
+st.video("https://skfb.ly/E9tw")
 
 
 
